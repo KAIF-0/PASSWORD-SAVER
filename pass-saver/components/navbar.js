@@ -10,10 +10,6 @@ import { useRouter } from 'next/navigation';
 const Navbar = () => {
     const [presentUser, setpresentUser] = useState(false)
     const router = useRouter()
-    console.log('router')
-
-
-
 
     useEffect(() => {
         const getUser = async () => {
