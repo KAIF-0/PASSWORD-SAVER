@@ -5,7 +5,7 @@ import prisma from "@/app/lib/prisma";
 export async function DELETE(request, { params }) {
 
     const { slug } = params;
-    const id = {...slug}[0]
+    const id = slug[0];
     try {
         const deletePass = await prisma.password.delete({
             where: {
