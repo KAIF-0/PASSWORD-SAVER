@@ -28,12 +28,12 @@ const Signin = () => {
             })
             let data = await res.json();
             if (data.message == "Sign In successfull!") {
-                toast.success(data.message,{
+                toast.success(data.message, {
                     position: "top-right",
                 })
                 router.push('/home', { scroll: false })
             } else {
-                toast.error(data.message,{
+                toast.error(data.message, {
                     position: "top-right",
                 })
             }
@@ -49,7 +49,7 @@ const Signin = () => {
                     method: "GET",
                 })
                 if (res.status == 200) {
-                    toast("You are already Logged-In!",{
+                    toast("You are already Logged-In!", {
                         position: 'top-right'
                     })
                     router.push('/home')
@@ -57,7 +57,7 @@ const Signin = () => {
             } catch (err) {
                 setpresentUser(false)
                 console.log(err)
-                
+
             }
         }
         getUser();
@@ -97,7 +97,7 @@ const Signin = () => {
                         </button>
                         <div className="text-center mt-4">
                             <Link href={"/signup"} className="text-white hover:underline">
-                                Don't have an account? Sign Up
+                                Don&apos;t have an account? Sign Up
                             </Link>
                         </div>
                     </form>
