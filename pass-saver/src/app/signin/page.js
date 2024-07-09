@@ -27,7 +27,6 @@ const signin = () => {
                 body: JSON.stringify(form),
             })
             let data = await res.json();
-            console.log(data)
             if (data.message == "Sign In successfull!") {
                 toast.success(data.message,{
                     position: "top-right",

@@ -14,7 +14,7 @@ datasource db {
 }
 
 model password {
-  id        Int      @id @default(autoincrement())
+  id        Int   @unique @id @default(autoincrement())
   site      String 
   username      String
   password  String

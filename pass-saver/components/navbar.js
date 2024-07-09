@@ -1,7 +1,7 @@
 "use client"
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
-import { Avatar, Dropdown } from 'flowbite-react';
+import { Dropdown } from 'flowbite-react';
 import toast, { Toaster } from 'react-hot-toast';
 import { useRouter } from 'next/navigation';
 
@@ -29,7 +29,7 @@ const Navbar = () => {
             }
         }
         getUser();
-    }, [router])
+    }, [presentUser])
 
 
     const handleSignOut = async () => {
