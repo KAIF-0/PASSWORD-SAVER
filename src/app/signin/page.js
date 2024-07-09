@@ -1,10 +1,10 @@
 "use client"
 import Link from 'next/link';
-import { redirect, useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
 import toast, { Toaster } from 'react-hot-toast';
 
-const signin = () => {
+const Signin = () => {
     const [form, setForm] = useState({
         email: '',
         password: '',
@@ -107,4 +107,4 @@ const signin = () => {
     )
 }
 
-export default signin
+export default Signin
