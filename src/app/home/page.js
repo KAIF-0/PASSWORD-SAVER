@@ -46,7 +46,7 @@ const Home = () => {
                 setpasswordArray(data)
             }
             else {
-                toast.error(data.message, {
+                toast.error('Try refreshing page!', {
                     position: "top-right",
                 })
             }
@@ -81,7 +81,7 @@ const Home = () => {
                     setform({ site: "", username: "", password: "" })
                 }
                 else {
-                    toast.error("Try Again!", {
+                    toast.error('Try refreshing page!', {
                         position: "top-right",
                     })
                 }
