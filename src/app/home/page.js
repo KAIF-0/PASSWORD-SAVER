@@ -158,7 +158,7 @@ const Home = () => {
                         <input
                             onChange={handleChange}
                             value={form.username}
-                            placeholder='Enter Username'
+                            placeholder='Enter Username/Id'
                             className='rounded-full border-2 bg-transparent text-slate-100 border-slate-100 w-full md:w-[48%] p-4 py-1'
                             type="text"
                             name="username"
@@ -202,7 +202,7 @@ const Home = () => {
                                 <thead className='bg-transparent border-2 rounded-3xl text-white'>
                                     <tr className='border-slate-100'>
                                         <th className='py-2 border-slate-100'>Site</th>
-                                        <th className='py-2 border-l-2 border-slate-100'>Username</th>
+                                        <th className='py-2 border-l-2 border-slate-100'>Username/Id</th>
                                         <th className='py-2 border-l-2 border-slate-100'>Password</th>
                                         <th className='py-2 border-l-2 border-slate-100'>Actions</th>
                                     </tr>
@@ -210,7 +210,7 @@ const Home = () => {
                                 <tbody className='bg-slate-100 text-black'>
                                     {passwordArray.map((item, index) => (
                                         <tr key={index}>
-                                            <td className='py-2 border border-white text-center'>
+                                            <td className='py-2 border border-black border-l-white text-center'>
                                                 <div className='flex items-center justify-center'>
                                                     <a href={item.site} target='_blank'>{item.site}</a>
                                                     <div className='lordiconcopy size-7 cursor-pointer' onClick={() => { copyText(item.site) }}>
@@ -222,7 +222,7 @@ const Home = () => {
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td className='py-2 border border-white text-center'>
+                                            <td className='py-2 border border-black text-center'>
                                                 <div className='flex items-center justify-center'>
                                                     <span>{item.username}</span>
                                                     <div className='lordiconcopy size-7 cursor-pointer' onClick={() => { copyText(item.username) }}>
@@ -234,7 +234,7 @@ const Home = () => {
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td className='py-2 border border-white text-center'>
+                                            <td className='py-2 border border-black text-center'>
                                                 <div className='flex items-center justify-center'>
                                                     <span>{"*".repeat(item.password.length)}</span>
                                                     <div className='lordiconcopy size-7 cursor-pointer' onClick={() => { copyText(item.password) }}>
@@ -246,7 +246,7 @@ const Home = () => {
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td className='justify-center py-2 border border-white text-center'>
+                                            <td className='justify-center py-2 border border-r-white border-black text-center'>
                                                 <span className='cursor-pointer mx-1' onClick={() => { deletePassword(item.id) }}>
                                                     <lord-icon
                                                         src="https://cdn.lordicon.com/skkahier.json"

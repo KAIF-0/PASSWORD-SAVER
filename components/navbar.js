@@ -3,13 +3,14 @@ import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { Dropdown } from 'flowbite-react';
 import toast, { Toaster } from 'react-hot-toast';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 
 
 
 const Navbar = () => {
     const [presentUser, setpresentUser] = useState(false)
     const router = useRouter()
+    const pathname = usePathname()
 
     useEffect(() => {
         const getUser = async () => {
@@ -29,7 +30,7 @@ const Navbar = () => {
             }
         }
         getUser();
-    }, [presentUser])
+    },[pathname])
 
 
     const handleSignOut = async () => {
