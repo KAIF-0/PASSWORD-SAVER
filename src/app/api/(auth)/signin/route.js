@@ -18,7 +18,7 @@ export async function POST(request) {
         )
         cookie.set('authToken', token, {
             httpOnly: true,
-            maxAge: 60 * 60,
+            maxAge: 24 * 60 * 60,
         });
         return NextResponse.json({ message: "Sign In successfull!" }, {
             status: 200
