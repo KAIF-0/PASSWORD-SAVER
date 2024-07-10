@@ -26,6 +26,7 @@ const Home = () => {
             let data = await res.json();
             if (res.status == 200) {
                 setuserId(data.userid)
+                getPass();
             }
             else {
                 router.push('/signin')
@@ -58,7 +59,6 @@ const Home = () => {
 
     useEffect(() => {
         getUser();
-        getPass();
     }, [])
 
 
