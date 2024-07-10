@@ -29,6 +29,9 @@ const Home = () => {
                 getPass();
             }
             else {
+                toast.error('Please Sign-In first!',{
+                    position: 'top-right'
+                    })
                 router.push('/signin')
             }
         } catch (err) {
