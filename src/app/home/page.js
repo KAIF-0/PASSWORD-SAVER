@@ -42,23 +42,26 @@ const Home = () => {
 
     const getPass = async () => {
         try {
-            let res = await fetch('/api/getpass', {
-                method: "GET",
-            })
-            let data = await res.json();
-            if (res.status == 200) {
-                setpasswordArray(data)
-            }
-            else {
-                toast.error('Try refreshing page!', {
-                    position: "top-right",
-                })
-            }
+          let res = await fetch("/api/getpass", {
+            method: "GET",
+          });
+          let data = await res.json();
+          console.log(res, data);
+          if (data.message === "No documents found") {
+            toast.error("No saved passwords found!", {
+              position: "top-right",
+            });
+          } else if (res.status == 200) {
+            setpasswordArray(data);
+          } else {
+            toast.error("Try refreshing page!", {
+              position: "top-right",
+            });
+          }
         } catch (err) {
-            console.log(err)
+          console.log(err);
         }
-    }
-
+      };
 
     useEffect(() => {
         getUser();
