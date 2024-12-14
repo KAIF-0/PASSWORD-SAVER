@@ -164,7 +164,7 @@ const Home = () => {
                         <input
                             onChange={handleChange}
                             value={form.username}
-                            placeholder='Enter Username/Id'
+                            placeholder='Enter Username/Email/Phone'
                             className='rounded-full border-2 bg-transparent text-slate-100 border-slate-100 w-full md:w-[48%] p-4 py-1'
                             type="text"
                             name="username"
