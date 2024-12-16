@@ -26,7 +26,7 @@ export async function GET(request, { params }) {
 
             const passwords = await prisma.password.findMany({ where: { userid: user.userid } });
 
-            if (passwords.length > 0) {
+            if (passwords) {
                 return NextResponse.json(passwords, { status: 200 });
             } else {
                 return NextResponse.json({ message: "No documents found" }, { status: 404 });
