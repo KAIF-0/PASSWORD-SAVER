@@ -24,7 +24,7 @@ const Home = () => {
       let data = await res.json();
       if (res.status == 200) {
         setuserId(data.userid);
-        getPass();
+        await getPass();
       } else {
         toast.error("Please Sign-In first!", {
           position: "top-right",
@@ -43,7 +43,7 @@ const Home = () => {
         method: "GET",
       });
       let data = await res.json();
-      console.log(res, data);
+      //   console.log(res, data);
       if (res.status == 200) {
         setpasswordArray(data);
       } else {
@@ -79,10 +79,10 @@ const Home = () => {
           toast.success("Password Saved...", {
             position: "top-right",
           });
-          getPass();
+          setpasswordArray([...passwordArray, form]);
           setform({ site: "", username: "", password: "" });
         } else {
-          toast.error("Try refreshing page!", {
+          toast.error("Failed to Save Password!", {
             position: "top-right",
           });
         }
