@@ -218,9 +218,9 @@ const Home = () => {
                           <tr key={index}>
                             <td className="py-2 border border-black border-l-white text-center">
                               <div className="flex items-center justify-center">
-                                <a href={item.site} target="_blank">
+                                <span>
                                   {item.site}
-                                </a>
+                                </span>
                                 <div
                                   className="lordiconcopy size-7 cursor-pointer"
                                   onClick={() => {
